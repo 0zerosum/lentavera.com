@@ -1,0 +1,34 @@
+/* ════════════════════════════════════════════════════════════════════
+   LENTAVERA · Base — reset, document field, grain, selection
+   ════════════════════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+::selection { background: var(--ink); color: var(--bg); }
+
+a { color: inherit; text-decoration: none; }
+
+.tnum { font-variant-numeric: tabular-nums; }
+.hidden { display: none !important; }
+
+/* ── Grain — the only texture. Fixed full-bleed overlay, multiply on
+   paper / screen on nero. Pair with the SVG fractalNoise node. ─────── */
+.grain {
+  position: fixed; inset: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none; z-index: 0;
+  opacity: 0.04; mix-blend-mode: multiply;
+}
+[data-theme="nero"] .grain { mix-blend-mode: screen; opacity: 0.03; }

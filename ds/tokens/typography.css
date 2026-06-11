@@ -1,0 +1,53 @@
+/* ════════════════════════════════════════════════════════════════════
+   LENTAVERA · Typography
+   Two families. One italic rule: italic ONLY in headings, proper names,
+   and email addresses. Everything else — meta, data fields, numbers,
+   titles/roles — is roman. Labels are roman, uppercase, wide-tracked.
+   ════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Families ──────────────────────────────────────────────────── */
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", "Times New Roman", serif; /* @kind font */
+  --sans:    "Newsreader", "Times New Roman", Georgia, serif; /* @kind font */
+  /* "sans" is a historical name from the codebase — the body face is a
+     serif (Newsreader). Kept for 1:1 parity with the product CSS. */
+  --font-display: var(--display);
+  --font-body:    var(--sans);
+
+  /* ── Weights ───────────────────────────────────────────────────── */
+  --weight-light:  300;
+  --weight-regular:400;
+  --weight-medium: 500;
+  --weight-semi:   600;
+
+  /* ── Display scale (Bodoni, mostly italic) ─────────────────────── */
+  --text-display:  clamp(48px, 6vw, 84px);  /* page masthead */
+  --text-title:    28px;                     /* thread subject */
+  --text-section:  24px;                     /* section head */
+  --text-stat:     52px;                     /* KPI number (roman) */
+
+  /* ── Body scale (Newsreader) ───────────────────────────────────── */
+  --text-lede:     clamp(17px, 1.5vw, 21px); /* italic standfirst */
+  --text-lg:       17px;
+  --text-base:     14px;
+  --text-sm:       13px;
+  --text-xs:       11px;
+
+  /* ── Label scale (roman, uppercase, tracked) ───────────────────── */
+  --text-label:    10px;     /* eyebrow / nav / button */
+  --text-label-sm: 9.5px;    /* meta labels, tags */
+
+  /* ── Tracking ──────────────────────────────────────────────────── */
+  --track-tight:  -0.03em;   /* large display */
+  --track-snug:   -0.01em;   /* headings */
+  --track-normal:  0; /* @kind other */
+  --track-label:   0.2em;    /* uppercase labels */
+  --track-wide:    0.28em;   /* eyebrow */
+
+  /* ── Line heights ──────────────────────────────────────────────── */
+  --leading-display: 0.9;
+  --leading-tight:   1.1;
+  --leading-snug:    1.35;
+  --leading-body:    1.5;
+  --leading-relaxed: 1.65;
+}

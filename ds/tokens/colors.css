@@ -1,0 +1,67 @@
+/* ════════════════════════════════════════════════════════════════════
+   LENTAVERA · Colors
+   Editorial Italian minimalism — paper-white field, ferro accent.
+   Two themes: paper (default) + nero (dark). One accent axis: ferro / sand / none.
+   Hairline borders carry elevation; the system uses NO drop shadows.
+   ════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Base neutrals — warm paper greys ──────────────────────────── */
+  --bg:        #F4F2EE;   /* page field */
+  --surface:   #FAFAF7;   /* raised bars, panels */
+  --paper:     #FFFFFF;   /* cards */
+  --nero:      #0F0E0C;   /* near-black — top bar, toast */
+  --ink:       #141311;   /* primary text */
+  --ink-soft:  #2C2A26;   /* secondary text */
+  --mid:       #645F57;   /* meta / labels (WCAG AA) */
+  --muted:     #6E6A62;   /* dimmed (WCAG AA) */
+
+  /* ── Hairlines & washes (ink at low alpha) ─────────────────────── */
+  --hair:      rgba(15, 14, 12, 0.14);   /* standard rule */
+  --hair-soft: rgba(15, 14, 12, 0.07);   /* faint row divider */
+  --soft:      rgba(15, 14, 12, 0.035);  /* hover wash */
+
+  /* ── Brand accent — ferro (oxidised iron red) ──────────────────── */
+  --accent:      #8B3A2D;
+  --accent-soft: rgba(139, 58, 45, 0.08);
+
+  /* ── Semantic hues ─────────────────────────────────────────────── */
+  --gold:  #7A6A43;   /* prospect / sand */
+  --ok:    #4A6B4F;   /* success / passed check */
+
+  /* ── Semantic aliases (point at the base tokens above) ─────────── */
+  --text-strong:    var(--ink);
+  --text-body:      var(--ink-soft);
+  --text-meta:      var(--mid);
+  --text-faint:     var(--muted);
+  --surface-page:   var(--bg);
+  --surface-raised: var(--surface);
+  --surface-card:   var(--paper);
+  --surface-invert: var(--nero);
+  --border-rule:    var(--hair);
+  --border-faint:   var(--hair-soft);
+  --accent-ferro:   var(--accent);
+}
+
+/* ── Accent axis (seuranta dashboard) ────────────────────────────── */
+[data-accent="none"]  { --accent: var(--ink); }
+[data-accent="ferro"] { --accent: #8B3A2D; }
+[data-accent="sand"]  { --accent: #7A6A43; }
+
+/* ── Nero (dark) theme — same token names, inverted field ────────── */
+[data-theme="nero"] {
+  --bg:        #14130F;
+  --surface:   #1B1A16;
+  --paper:     #1B1A16;
+  --nero:      #000000;
+  --ink:       #F0EEE7;
+  --ink-soft:  #C7C3BA;
+  --mid:       #8E8A82;
+  --muted:     #868178;
+  --hair:      rgba(240, 238, 231, 0.16);
+  --hair-soft: rgba(240, 238, 231, 0.08);
+  --soft:      rgba(240, 238, 231, 0.04);
+  --accent:      #C97A5F;
+  --accent-soft: rgba(201, 122, 95, 0.12);
+  --ok:    #8FB394;
+}

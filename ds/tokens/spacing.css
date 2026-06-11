@@ -1,0 +1,45 @@
+/* ════════════════════════════════════════════════════════════════════
+   LENTAVERA · Spacing, layout, radii, motion
+   The grid is editorial: a centred column, generous side margins, and
+   rules (1px hairlines) rather than boxes. Corners are square — only
+   avatars/dots (circles) and relationship pills (full radius) round off.
+   ════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Spacing scale (4px base) ──────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  22px;
+  --space-6:  28px;
+  --space-7:  36px;
+  --space-8:  48px;
+  --space-9:  64px;
+
+  /* ── Layout shell ──────────────────────────────────────────────── */
+  --bar-h:      44px;     /* top bar height */
+  --maxw:       1400px;   /* content column */
+  --gutter:     56px;     /* main side padding */
+  --gutter-sm:  28px;     /* tightened side padding < 1180px */
+
+  /* ── Radii — square by default ─────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm:   2px;     /* focus chip, tiny insets */
+  --radius-pill: 999px;   /* relationship tags */
+  --radius-full: 50%;     /* avatars, priority dots */
+
+  /* ── Border widths ─────────────────────────────────────────────── */
+  --rule:        1px;     /* hairline — the only divider weight */
+  --rule-accent: 2px;     /* hover bar / confidence track emphasis */
+
+  /* ── Motion — fast, flat, no bounce ────────────────────────────── */
+  --ease:          ease; /* @kind other */
+  --dur-fast:      140ms;  /* @kind other */ /* color / border / background */
+  --dur-base:      160ms; /* @kind other */
+  --dur-accordion: 280ms;  /* @kind other */ /* detail expand */
+  --dur-toast:     240ms; /* @kind other */
+
+  /* ── Breakpoint ────────────────────────────────────────────────── */
+  --bp-compact: 1180px;
+}

@@ -1,0 +1,13 @@
+/* ════════════════════════════════════════════════════════════════════
+   LENTAVERA · Design System — global entry point
+   Editorial Italian minimalism · Bodoni Moda + Newsreader · ferro accent.
+   Consumers link THIS file only. Import order matters: fonts → tokens →
+   base reset → shared pattern library.
+   ════════════════════════════════════════════════════════════════════ */
+
+@import url("tokens/fonts.css");
+@import url("tokens/colors.css");
+@import url("tokens/typography.css");
+@import url("tokens/spacing.css");
+@import url("tokens/base.css");
+@import url("tokens/patterns.css");
