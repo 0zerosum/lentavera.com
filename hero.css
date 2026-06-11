@@ -128,7 +128,7 @@ body {
 }
 .headline .ln { display: block; white-space: nowrap; }
 .headline .ln > span { display: block; will-change: transform, opacity; }
-.headline .accent { color: var(--accent); }
+.headline .accent { color: var(--accent); font-style: italic; }
 
 .subhead {
   font-family: var(--font-body); font-weight: 400; font-style: italic;
